@@ -62,7 +62,12 @@
       </span>
       <span class="alignright" style="margin-top: 2px; margin-right: 15px;">
         <form id="addonSearchForm" method="get" action="/search/">
-            <input type="text" class="addonSearchInput" name="terms" placeholder="Find add-ons..." size="22" maxlength="48"> <input type="submit" value="Search" class="addonSearchButton">
+            <input type="text" class="addonSearchInput" name="terms" placeholder="Find add-ons..." size="22" maxlength="48"
+{if $SEARCH_TERMS}
+      value="{$SEARCH_TERMS}"
+{/if}
+            >
+            <input type="submit" value="Search" class="addonSearchButton">
         </form>
       </span>
       </div>
